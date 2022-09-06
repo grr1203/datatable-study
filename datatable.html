@@ -1,36 +1,47 @@
 <!DOCTYPE html>
 <html lang="kr">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css"/> 
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css" />
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.1.js"></script>
     <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
     <title>Datatable study</title>
-</head>
-<body>
-    <table id="myTable" class="display">
-        <thead>
-            <tr>
-                <th>Column 1</th>
-                <th>Column 2</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Row 1 Data 1</td>
-                <td>Row 1 Data 2</td>
-            </tr>
-            <tr>
-                <td>Row 2 Data 1</td>
-                <td>Row 2 Data 2</td>
-            </tr>
-        </tbody>
+  </head>
+  <body>
+    <table id="example" class="display">
+      <thead>
+        <tr>
+          <th>이름</th>
+          <th>직위</th>
+          <th>연봉</th>
+          <th>사무실</th>
+        </tr>
+      </thead>
     </table>
     <script>
-        $(document).ready( function () {
-            $('#myTable').DataTable();
-        } );
+      let data = [
+        {
+          name: 'Tiger Nixon',
+          position: 'System Architect',
+          salary: '$3,120',
+          start_date: '2011/04/25',
+          office: 'Edinburgh',
+          extn: '5421',
+        },
+        {
+          name: 'Garrett Winters',
+          position: 'Director',
+          salary: '$5,300',
+          start_date: '2011/07/25',
+          office: 'Edinburgh',
+          extn: '8422',
+        },
+      ];
+
+      $('#example').DataTable({
+        data,
+        columns: [{ data: 'name' }, { data: 'position' }, { data: 'salary' }, { data: 'office' }],
+      });
     </script>
-    <script src="./index.js"></script>
-</body>
+  </body>
 </html>
