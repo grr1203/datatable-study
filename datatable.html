@@ -11,19 +11,17 @@
     <table id="example" class="display">
       <thead>
         <tr>
-          <th>이름</th>
-          <th>직위</th>
-          <th>연봉</th>
-          <th>사무실</th>
+          <th>이메일</th>
         </tr>
       </thead>
     </table>
     <script>
       $('#example').DataTable({
+        columns: [{ data: 'email' }],
         ajax: {
             url: './data.json'
         },
-        columns: [{ data: 'name' }, { data: 'position' }, { data: 'salary' }, { data: 'office' }],
+        serverSide: true,
       });
     </script>
   </body>

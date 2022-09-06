@@ -1,6 +1,7 @@
 {
   "data": [
     {
+      "email": "logan@reconlabs.kr",
       "name": "Tiger Nixon",
       "position": "System Architect",
       "salary": "$3,120",
@@ -9,6 +10,7 @@
       "extn": "5421"
     },
     {
+      "email": "test@reconlabs.kr",
       "name": "Garrett Winters",
       "position": "Director",
       "salary": "$5,300",
